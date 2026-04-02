@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaliber Serwis - Warsztat Samochodowy Zabrze | Wymiana Opon od 149zł</title>
+    <meta name="description" content="Profesjonalny warsztat samochodowy w Zabrzu. Wymiana opon od 149zł, serwis aut osobowych, SUV i dostawczych. Szybkie terminy. ☎️ 795 596 786">
+    <meta name="keywords" content="warsztat samochodowy Zabrze, wymiana opon Zabrze, serwis samochodowy Zabrze, przechowalnia opon Zabrze">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'monospace'],
+                        'rajdhani': ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        'steel': '#4a5568',
+                        'dark-steel': '#2d3748',
+                        'racing-red': '#e53e3e',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .engine-pattern {
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(229, 62, 62, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(74, 85, 104, 0.1) 0%, transparent 50%);
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .racing-border {
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, #1a202c, #2d3748) padding-box,
+                        linear-gradient(135deg, #e53e3e, #c53030, #9b2c2c) border-box;
+        }
+        
+        .pulse-red {
+            animation: pulse-red 2s infinite;
+        }
+        
+        @keyframes pulse-red {
+            0%, 100% { box-shadow: 0 0 20px rgba(229, 62, 62, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(229, 62, 62, 0.8); }
+        }
+        
+        .sticky-phone {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-rajdhani overflow-x-hidden">
+    
+    <!-- Top Bar -->
+    <div class="bg-racing-red text-white py-2 text-center">
+        <div class="container mx-auto px-4">
+            <p class="font-medium">
+                <i class="fas fa-phone-alt mr-2"></i>
+                Szybkie terminy! Zadzwoń teraz: <a href="tel:795596786" class="font-bold hover:underline">795 596 786</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-900 bg-opacity-95 backdrop-blur-sm sticky top-0 z-50 border-b border-steel">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-cog text-racing-red text-3xl mr-3 animate-spin-slow"></i>
+                    <h1 class="font-orbitron text-2xl font-bold gradient-text">KALIBER SERWIS</h1>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#uslugi" class="hover:text-racing-red transition-colors">Usługi</a>
+                    <a href="#o-nas" class="hover:text-racing-red transition-colors">O nas</a>
+                    <a href="#cennik" class="hover:text-racing-red transition-colors">Cennik</a>
+                    <a href="#kontakt" class="hover:text-racing-red transition-colors">Kontakt</a>
+                    <a href="tel:795596786" class="bg-racing-red hover:bg-red-600 px-6 py-2 rounded-lg font-bold transition-colors">
+                        <i class="fas fa-phone mr-2"></i>Zadzwoń
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-black opacity-70 z-10"></div>
+        <div class="absolute inset-0 parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        
+        <div class="relative z-20 text-center max-w-4xl mx-auto px-4">
+            <h1 class="font-orbitron text-5xl md:text-7xl font-black mb-6 gradient-text leading-tight">
+                KALIBER SERWIS
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-4 font-medium">
+                PRECYZJA, NA KTÓREJ MOŻESZ POLEGAĆ
+            </p>
+            <p class="text-lg md:text-xl text-gray-400 mb-8">
+                Szybka wymiana opon i kompleksowy serwis dla aut osobowych, SUV i dostawczych
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+                <a href="tel:795596786" class="racing-border bg-racing-red hover:bg-red-600 px-8 py-4 rounded-lg text-xl font-bold transition-all hover-lift pulse-red">
+                    <i class="fas fa-phone-alt mr-3"></i>ZADZWOŃ TERAZ
+                </a>
+                <a href="#kontakt" class="racing-border bg-transparent hover:bg-steel px-8 py-4 rounded-lg text-xl font-bold transition-all hover-lift">
+                    <i class="fas fa-calendar-alt mr-3"></i>ZAREZERWUJ TERMIN
+                </a>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-center">
+                <div class="bg-black bg-opacity-50 px-6 py-3 rounded-lg">
+                    <p class="text-racing-red font-bold text-lg">WYMIANA OPON</p>
+                    <p class="text-white font-bold text-xl">OD 149 ZŁ ZA KOMPLET</p>
+                </div>
+                <div class="bg-black bg-opacity-50 px-6 py-3 rounded-lg">
+                    <p class="text-green-400 font-bold">✓ SZYBKIE TERMINY</p>
+                    <p class="text-green-400 font-bold">✓ NOWOCZESNY SPRZĘT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="uslugi" class="py-20 bg-gray-800 engine-pattern">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl md:text-5xl font-bold mb-4 gradient-text">NASZE USŁUGI</h2>
+                <p class="text-xl text-gray-300">Profesjonalny serwis dla każdego typu pojazdu</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="racing-border bg-gray-900 p-8 rounded-lg hover-lift">
+                    <div class="text-racing-red text-5xl mb-4">
+                        <i class="fas fa-tire"></i>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">WYMIANA OPON</h3>
+                    <p class="text-gray-300 mb-4">Profesjonalna wymiana opon z wyważaniem kół. Obsługujemy wszystkie rozmiary.</p>
+                    <div class="text-racing-red font-bold text-xl">OD 149 ZŁ</div>
+                </div>
+                
+                <div class="racing-border bg-gray-900 p-8 rounded-lg hover-lift">
+                    <div class="text-racing-red text-5xl mb-4">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">AUTA OSOBOWE</h3>
+                    <p class="text-gray-300 mb-4">Kompleksowy serwis samochodów osobowych. Diagnostyka, naprawa, konserwacja.</p>
+                    <div class="text-green-400 font-bold">✓ PEŁEN ZAKRES</div>
+                </div>
+                
+                <div class="racing-border bg-gray-900 p-8 rounded-lg hover-lift">
+                    <div class="text-racing-red text-5xl mb-4">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">SUV I DOSTAWCZE</h3>
+                    <p class="text-gray-300 mb-4">Specjalizujemy się w obsłudze większych pojazdów - SUV i aut dostawczych.</p>
+                    <div class="text-green-400 font-bold">✓ PROFESJONALNIE</div>
+                </div>
+                
+                <div class="racing-border bg-gray-900 p-8 rounded-lg hover-lift">
+                    <div class="text-racing-red text-5xl mb-4">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">PRZECHOWALNIA OPON</h3>
+                    <p class="text-gray-300 mb-4">Bezpieczne przechowywanie Twoich opon w odpowiednich warunkach.</p>
+                    <div class="text-green-400 font-bold">✓ BEZPIECZNIE</div>
+                </div>
+                
+                <div class="racing-border bg-gray-900 p-8 rounded-lg hover-lift">
+                    <div class="text-racing-red text-5xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">SERWIS MECHANICZNY</h3>
+                    <p class="text-gray-300 mb-4">Naprawa silników, układów hamulcowych, zawieszenia i innych podzespołów.</p>
+                    <div class="text-green-400 font-bold">✓ DOŚWIADCZENIE</div>
+                </div>
+                
+                <div class="racing-border bg-gray-900 p-8 rounded-lg hover-lift">
+                    <div class="text-racing-red text-5xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">DIAGNOSTYKA</h3>
+                    <p class="text-gray-300 mb-4">Nowoczesna diagnostyka komputerowa wszystkich systemów pojazdu.</p>
+                    <div class="text-green-400 font-bold">✓ PRECYZYJNIE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="o-nas" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-orbitron text-4xl md:text-5xl font-bold mb-6 gradient-text">
+                        DLACZEGO KALIBER SERWIS?
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Warsztat samochodowy w Zabrzu, który łączy doświadczenie z nowoczesnością. 
+                        Twój samochód w dobrych rękach.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="bg-racing-red p-3 rounded-lg mr-4">
+                                <i class="fas fa-cogs text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">NOWOCZESNY SPRZĘT</h3>
+                                <p class="text-gray-400">Najnowocześniejsze urządzenia diagnostyczne i narzędzia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-racing-red p-3 rounded-lg mr-4">
+                                <i class="fas fa-award text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">DOŚWIADCZENIE I PRECYZJA</h3>
+                                <p class="text-gray-400">Lata doświadczenia w branży motoryzacyjnej</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-racing-red p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">SZYBKIE TERMINY</h3>
+                                <p class="text-gray-400">Nie czekasz w nieskończoność - działamy sprawnie</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-racing-red p-3 rounded-lg mr-4">
+                                <i class="fas fa-handshake text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">PROFESJONALNA OBSŁUGA</h3>
+                                <p class="text-gray-400">Konkretnie, bez lania wody - tak jak lubisz</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-racing-red p-3 rounded-lg mr-4">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">BEZPIECZNA PRACA</h3>
+                                <p class="text-gray-400">Dbamy o Twój pojazd jak o własny</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="racing-border bg-gray-800 p-8 rounded-lg">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-quote-left text-racing-red text-3xl mb-4"></i>
+                            <h3 class="font-orbitron text-2xl font-bold mb-4">TWÓJ SAMOCHÓD W DOBRYCH RĘKACH</h3>
+                        </div>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            W Kaliber Serwis nie robimy rzeczy na pół gwizdka. Każdy pojazd traktujemy 
+                            z najwyższą precyzją i uwagą. Nasze podejście to połączenie pasji do motoryzacji 
+                            z profesjonalizmem na najwyższym poziomie.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            <strong class="text-racing-red">Lokalizacja:</strong> Obsługujemy klientów z Zabrza i okolic. 
+                            Dogodna lokalizacja przy ul. Pawliczka 25 zapewnia łatwy dojazd.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="cennik" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl md:text-5xl font-bold mb-4 gradient-text">CENNIK</h2>
+                <p class="text-xl text-gray-300">Przejrzyste ceny, bez ukrytych kosztów</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="racing-border bg-gray-900 p-8 md:p-12 rounded-lg text-center">
+                    <div class="mb-8">
+                        <i class="fas fa-tire text-racing-red text-6xl mb-4"></i>
+                        <h3 class="font-orbitron text-3xl md:text-4xl font-bold mb-4">WYMIANA OPON</h3>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-gray-800 p-6 rounded-lg">
+                            <h4 class="font-bold text-xl mb-2">AUTA OSOBOWE</h4>
+                            <div class="text-racing-red text-3xl font-bold mb-2">149 ZŁ</div>
+                            <p class="text-gray-400">za komplet (4 opony)</p>
+                        </div>
+                        
+                        <div class="bg-gray-800 p-6 rounded-lg">
+                            <h4 class="font-bold text-xl mb-2">SUV / 4X4</h4>
+                            <div class="text-racing-red text-3xl font-bold mb-2">179 ZŁ</div>
+                            <p class="text-gray-400">za komplet (4 opony)</p>
+                        </div>
+                        
+                        <div class="bg-gray-800 p-6 rounded-lg">
+                            <h4 class="font-bold text-xl mb-2">DOSTAWCZE</h4>
+                            <div class="text-racing-red text-3xl font-bold mb-2">WYCENA</div>
+                            <p class="text-gray-400">indywidualna</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-400 mb-6">
+                        * Ceny mogą się różnić w zależności od rozmiaru i typu pojazdu
+                    </p>
+                    
+                    <a href="tel:795596786" class="bg-racing-red hover:bg-red-600 px-8 py-4 rounded-lg text-xl font-bold transition-colors inline-block pulse-red">
+                        <i class="fas fa-phone-alt mr-3"></i>UMÓw SIĘ TERAZ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl md:text-5xl font-bold mb-4 gradient-text">JAK TO DZIAŁA?</h2>
+                <p class="text-xl text-gray-300">Prosty proces, szybki rezultat</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-racing-red w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold">1</span>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">ZADZWOŃ LUB NAPISZ</h3>
+                    <p class="text-gray-300 text-lg">Skontaktuj się z nami telefonicznie lub mailowo, aby umówić termin</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-racing-red w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold">2</span>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">UMÓW TERMIN</h3>
+                    <p class="text-gray-300 text-lg">Ustalamy dogodny dla Ciebie termin i omawiamy zakres prac</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-racing-red w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold">3</span>
+                    </div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4">ODBIERZ GOTOWE AUTO</h3>
+                    <p class="text-gray-300 text-lg">Przyjeżdżasz o umówionej porze i odbierasz naprawiony pojazd</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl md:text-5xl font-bold mb-4 gradient-text">CO MÓWIĄ KLIENCI</h2>
+                <p class="text-xl text-gray-300">Opinie naszych zadowolonych klientów</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="racing-border bg-gray-900 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg mr-2">★★★★★</div>
+                        <span class="text-gray-400">5/5</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "Szybko, profesjonalnie i w dobrej cenie. Wymiana opon zajęła 30 minut. 
+                        Polecam każdemu, kto szuka konkretnego serwisu."
+                    </p>
+                    <div class="text-sm text-gray-400">
+                        <strong>Marcin K.</strong> - Zabrze
+                    </div>
+                </div>
+                
+                <div class="racing-border bg-gray-900 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg mr-2">★★★★★</div>
+                        <span class="text-gray-400">5/5</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "Najlepszy warsztat w okolicy! Mechanicy wiedzą co robią, a obsługa jest 
+                        na najwyższym poziomie. Będę wracać."
+                    </p>
+                    <div class="text-sm text-gray-400">
+                        <strong>Anna W.</strong> - Gliwice
+                    </div>
+                </div>
+                
+                <div class="racing-border bg-gray-900 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg mr-2">★★★★★</div>
+                        <span class="text-gray-400">5/5</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "Wreszcie warsztat, który nie ciągnie za język i robi robotę konkretnie. 
+                        Mój SUV był obsłużony perfekcyjnie."
+                    </p>
+                    <div class="text-sm text-gray-400">
+                        <strong>Tomasz L.</strong> - Katowice
+                    </div>
+                </div>
+                
+                <div class="racing-border bg-gray-900 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg mr-2">★★★★★</div>
+                        <span class="text-gray-400">5/5</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        "Przechowalnia opon to świetna opcja. Nie muszę kombinować gdzie je trzymać. 
+                        Wszystko ogarnięte w jednym miejscu."
+                    </p>
+                    <div class="text-sm text-gray-400">
+                        <strong>Piotr M.</strong> - Bytom
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-orbitron text-4xl md:text-5xl font-bold mb-4 gradient-text">CZĘSTO ZADAWANE PYTANIA</h2>
+                <p class="text-xl text-gray-300">Odpowiedzi na najważniejsze pytania</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="racing-border bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-3 text-racing-red">
+                        <i class="fas fa-question-circle mr-2"></i>
+                        Ile trwa wymiana opon?
+                    </h3>
+                    <p class="text-gray-300">
+                        Standardowa wymiana 4 opon zajmuje około 30-45 minut. 
+                        Czas może się wydłużyć w przypadku dodatkowych usług jak wyważanie.
+                    </p>
+                </div>
+                
+                <div class="racing-border bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-3 text-racing-red">
+                        <i class="fas fa-question-circle mr-2"></i>
+                        Czy trzeba się wcześniej umawiać?
+                    </h3>
+                    <p class="text-gray-300">
+                        Tak, zalecamy wcześniejsze umówienie terminu telefonicznie. 
+                        Dzięki temu unikniemy niepotrzebnego oczekiwania.
+                    </p>
+                </div>
+                
+                                <div class="racing-border bg-gray-800 p-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-3 text-racing-red">
+                        <i class="fas fa-question-circle mr-2"></i>
+                        Czy oferujecie przechowalnię opon?
+                    </h3>
+                    <p class="text-gray-300">
+                        Tak, oferujemy bezpieczne przechowywanie opon w odpowiednich warunkach. 
+                        Zapytaj o szczegóły podczas wizyty lub telefonicznie.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT + MAP -->
+    <section id="kontakt" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-orbitron text-4xl md:text-5xl font-bold mb-4 gradient-text">
+                    KONTAKT I DOJAZD
+                </h2>
+                <p class="text-gray-300 text-xl">Umów się szybko lub przyjedź do nas</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10">
+                
+                <!-- Contact Info -->
+                <div class="racing-border bg-gray-900 p-8 rounded-lg">
+                    <h3 class="font-orbitron text-2xl font-bold mb-6">DANE KONTAKTOWE</h3>
+
+                    <div class="space-y-5 text-lg">
+                        <p>
+                            <i class="fas fa-phone text-racing-red mr-3"></i>
+                            <a href="tel:795596786" class="hover:text-racing-red font-bold">795 596 786</a>
+                        </p>
+
+                        <p>
+                            <i class="fas fa-envelope text-racing-red mr-3"></i>
+                            <a href="mailto:warsztat@kaliberautoserwis.com" class="hover:text-racing-red">
+                                warsztat@kaliberautoserwis.com
+                            </a>
+                        </p>
+
+                        <p>
+                            <i class="fas fa-map-marker-alt text-racing-red mr-3"></i>
+                            Zabrze, ul. Pawliczka 25
+                        </p>
+
+                        <p>
+                            <i class="fas fa-clock text-racing-red mr-3"></i>
+                            Pon–Pt: 8:00 – 16:00
+                        </p>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="tel:795596786" class="bg-racing-red hover:bg-red-600 px-8 py-4 rounded-lg text-xl font-bold transition-colors inline-block pulse-red">
+                            <i class="fas fa-phone mr-2"></i>ZADZWOŃ TERAZ
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Map -->
+                <div class="racing-border rounded-lg overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps?q=Zabrze%20Pawliczka%2025&output=embed"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height:400px;"
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-steel py-10">
+        <div class="container mx-auto px-4">
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                
+                <!-- Logo -->
+                <div>
+                    <h3 class="font-orbitron text-2xl font-bold mb-4 gradient-text">
+                        KALIBER SERWIS
+                    </h3>
+                    <p class="text-gray-400">
+                        Profesjonalny warsztat samochodowy w Zabrzu. 
+                        Wymiana opon, serwis i diagnostyka.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold mb-4">SZYBKA NAWIGACJA</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#uslugi" class="hover:text-racing-red">Usługi</a></li>
+                        <li><a href="#cennik" class="hover:text-racing-red">Cennik</a></li>
+                        <li><a href="#kontakt" class="hover:text-racing-red">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- SEO -->
+                <div>
+                    <h4 class="font-bold mb-4">OBSZAR DZIAŁANIA</h4>
+                    <p class="text-gray-400 text-sm">
+                        Warsztat samochodowy Zabrze • Wymiana opon Zabrze • 
+                        Serwis samochodowy Zabrze • Przechowalnia opon Zabrze
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                © 2026 Kaliber Serwis – Wszelkie prawa zastrzeżone
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY CALL BUTTON -->
+    <a href="tel:795596786" class="sticky-phone bg-racing-red text-white p-4 rounded-full shadow-lg">
+        <i class="fas fa-phone text-2xl"></i>
+    </a>
+
+</body>
+</html>
